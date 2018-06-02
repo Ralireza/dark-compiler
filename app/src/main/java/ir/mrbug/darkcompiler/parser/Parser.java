@@ -1,6 +1,5 @@
 package ir.mrbug.darkcompiler.parser;
 
-import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.AbstractMap.SimpleEntry;
 import java.util.ArrayList;
@@ -17,11 +16,6 @@ import java.util.StringTokenizer;
 
 import ir.mrbug.darkcompiler.exceptions.AnalyzerException;
 import ir.mrbug.darkcompiler.token.Token;
-
-
-import static ir.mrbug.darkcompiler.token.TokenType.DoubleConstant;
-import static ir.mrbug.darkcompiler.token.TokenType.Identifier;
-import static ir.mrbug.darkcompiler.token.TokenType.IntConstant;
 
 /**
  * The {@code Parser} class represents predictive parser. It accepts only LL(1)
@@ -43,8 +37,7 @@ import static ir.mrbug.darkcompiler.token.TokenType.IntConstant;
  * definition, "|" designates alternation, and newlines designate termination.
  * Use "EPSILON" to represent an empty string. Place spaces between things you
  * don't want to read as one symbol: ( A ) != (A).
- * 
- * @author Ira Korshunova
+ *
  * 
  */
 

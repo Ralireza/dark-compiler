@@ -23,7 +23,7 @@ public class Splash extends AppCompatActivity {
                 .interpolate(new AccelerateDecelerateInterpolator())
                 .duration(1000)
                 .playOn(findViewById(R.id.splash));
-        new CountDownTimer(2000, 1000) {
+        new CountDownTimer(5000, 1000) {
 
             public void onTick(long millisUntilFinished) {
                 //here you can have your logic to set text to edittext

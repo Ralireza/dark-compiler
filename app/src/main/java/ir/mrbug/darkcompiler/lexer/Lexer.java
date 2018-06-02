@@ -12,13 +12,6 @@ import ir.mrbug.darkcompiler.exceptions.AnalyzerException;
 import ir.mrbug.darkcompiler.token.Token;
 import ir.mrbug.darkcompiler.token.TokenType;
 
-/**
- * The {@code Lexer} class represents lexical analyzer for subset of Java
- * language.
- * 
- * @author Ira Korshunova
- * 
- */
 public class Lexer {
 
 	/** Mapping from type of token to its regular expression */

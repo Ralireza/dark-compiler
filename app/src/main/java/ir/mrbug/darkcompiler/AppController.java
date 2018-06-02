@@ -8,10 +8,6 @@ import ir.mrbug.darkcompiler.R;
 import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
-/**
- * Created by Bezet on 06/04/2017.
- */
-
 public class AppController extends Application {
 
 

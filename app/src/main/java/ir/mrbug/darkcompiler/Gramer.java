@@ -15,7 +15,13 @@ class Gramer {
 
 
 /*
+* our grammar is :
 *
+* S -> if (E) {S} S
+* S -> if (E) {S} else {S} S
+* S -> while (E) {S} S
+* S -> E ; S
+* S -> ϵ
 * E -> E + T |T
 * T -> T * F | F
 * F -> (E) | id

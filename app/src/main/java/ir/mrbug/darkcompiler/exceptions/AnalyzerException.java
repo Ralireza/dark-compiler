@@ -1,13 +1,6 @@
 package ir.mrbug.darkcompiler.exceptions;
 
-/**
- * The {@code AnalyzerException} class represents exceptions which may be caused
- * by lexical or syntax errors
- * 
- * @author Ira Korshunova
- * 
- */
-@SuppressWarnings("serial")
+
 public class AnalyzerException extends Exception {
 	/**
 	 * Position in the input source(lexer) or the number of token(parser), where

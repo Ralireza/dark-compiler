@@ -1,11 +1,5 @@
 package ir.mrbug.darkcompiler.parser;
 
-/**
- * The {@code Terminal} class represents a terminal symbol of grammar
- * 
- * @author Ira Korshunova
- * 
- */
 public class Terminal extends Symbol{
 
 	public Terminal(int code, String name) {

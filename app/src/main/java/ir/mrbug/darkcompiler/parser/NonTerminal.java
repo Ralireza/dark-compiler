@@ -1,11 +1,5 @@
 package ir.mrbug.darkcompiler.parser;
 
-/**
- * The {@code NonTerminal} class represents nonterminal symbol of grammar
- * 
- * @author Ira Korshunova
- * 
- */
 public class NonTerminal extends Symbol {
 
 	/**
