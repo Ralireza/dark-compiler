@@ -63,7 +63,7 @@ public class scanner {
         return false;
     }
     private boolean isdigit(){
-        return (c<57 && c>47);
+        return (c<='9' && c>='0');
     }
     private boolean isleter(){
         return (c>64 && c<91) || (c<123 && c>96);
@@ -77,10 +77,14 @@ public class scanner {
                 t=t*10+c-48;
                 c=nextchar();
             }
+            else if(isop() || isac()){
+                backtrack();
+                break;
+            }
             else
                 return new token("eror", -1);
         }
-        return new token("number", t);
+        return new token("id", t);
     }   
     private token getleter(){
         String ltr=""+c;

@@ -71,9 +71,6 @@ public class MainActivity extends AppCompatActivity {
                     tvTokens.setText("");
 
                     lexer.tokenize(source.getText().toString());
-//                    parser = Parser.getObj();
-//                    parser.parse(Gramer.laws
-//                            , lexer.getFilteredTokens());
 
                     if (haveError) {
                         tvTokens.setText("");
@@ -85,9 +82,6 @@ public class MainActivity extends AppCompatActivity {
 
                     }
 
-//                    for (Rule rule : parser.getSequenceOfAppliedRules()) {
-//                        tvTokens.append(rule.toString() + "\n");
-//                    }
 
                 } catch (AnalyzerException e) {
                     tvTokens.setText(e.getMessage());

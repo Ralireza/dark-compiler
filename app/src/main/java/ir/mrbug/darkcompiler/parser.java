@@ -110,98 +110,19 @@ public class parser {
                             stack.push("1");
                             break;
                         } else {
-                            switch(action.charAt(2)){
-                                case '0':
-                                    currentState = 10;
-                                    stack.push("10");
-                                    break;
-                                case '1':
-                                    currentState = 11;
-                                    stack.push("11");
-                                    break;
-                                case '2':
-                                    currentState = 12;
-                                    stack.push("12");
-                                    break;
-                                case '3':
-                                    currentState = 13;
-                                    stack.push("13");
-                                    break;
-                                case '4':
-                                    currentState = 14;
-                                    stack.push("14");
-                                    break;
-                                case '5':
-                                    currentState = 15;
-                                    stack.push("15");
-                                    break;
-                                case '6':
-                                    currentState = 16;
-                                    stack.push("16");
-                                    break;
-                                case '7':
-                                    currentState = 17;
-                                    stack.push("17");
-                                    break;
-                                case '8':
-                                    currentState = 18;
-                                    stack.push("18");
-                                    break;
-                                case '9':
-                                    currentState = 19;
-                                    stack.push("19");
-                                    break;
-                            }
-                            
-                        }break;
+                            currentState = (action.charAt(1)-'0')*10+action.charAt(2)-'0';
+                            stack.push(""+action.charAt(1)+action.charAt(2));
+                            break;
+                        }
                     case '2':
                         if (action.length() == 2) {
                             currentState = 2;
                             stack.push("2");
                             break;
                         } else {
-                            switch(action.charAt(2)){
-                                case '0':
-                                    currentState = 20;
-                                    stack.push("20");
-                                    break;
-                                case '1':
-                                    currentState = 21;
-                                    stack.push("21");
-                                    break;
-                                case '2':
-                                    currentState = 22;
-                                    stack.push("22");
-                                    break;
-                                case '3':
-                                    currentState = 23;
-                                    stack.push("23");
-                                    break;
-                                case '4':
-                                    currentState = 24;
-                                    stack.push("24");
-                                    break;
-                                case '5':
-                                    currentState = 25;
-                                    stack.push("25");
-                                    break;
-                                case '6':
-                                    currentState = 26;
-                                    stack.push("26");
-                                    break;
-                                case '7':
-                                    currentState = 27;
-                                    stack.push("27");
-                                    break;
-                                case '8':
-                                    currentState = 28;
-                                    stack.push("28");
-                                    break;
-                                case '9':
-                                    currentState = 29;
-                                    stack.push("29");
-                                    break;
-                            }break;
+                            currentState = (action.charAt(1)-'0')*10+action.charAt(2)-'0';
+                            stack.push(""+action.charAt(1)+action.charAt(2));
+                            break;
                         }
                     case '3':
                         if (action.length() == 2) {
