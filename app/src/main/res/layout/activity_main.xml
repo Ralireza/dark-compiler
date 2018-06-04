@@ -73,6 +73,7 @@
             android:layout_margin="10dp"
             android:background="@drawable/rounded"
             android:padding="10dp"
+            android:text=""
             android:scrollbars="vertical"
             android:textColor="@color/green"
             android:textSize="18sp" />
