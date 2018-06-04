@@ -21,7 +21,6 @@ import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class MainActivity extends AppCompatActivity {
 
-    private scanner scan;
     private parser pparser;
     private MediaPlayer mediaPlayer;
     private EditText source;
@@ -29,7 +28,6 @@ public class MainActivity extends AppCompatActivity {
     private View btnParse;
     private TextView tvTokens;
     private TextView tvSrc;
-    private boolean haveError = false;
 
     @Override
     protected void attachBaseContext(Context newBase) {
@@ -60,39 +58,6 @@ public class MainActivity extends AppCompatActivity {
                 YoYo.with(Techniques.Pulse)
                         .duration(300)
                         .playOn(btnTokenize);
-//
-//
-//                try {
-//                    tvTokens.setText("");
-//
-//                    if (haveError) {
-//                        tvTokens.setText("");
-//                    }
-//                    for (Token token :
-//                            lexer.getFilteredTokens()) {
-//                        tvTokens.append("\"" + token.getTokenType() + "\"     :     \"" + token.getTokenString() + "\"   \n");
-//                        tvTokens.setTextColor(getResources().getColor(R.color.green));
-//
-//                    }
-
-//                    for (Rule rule : parser.getSequenceOfAppliedRules()) {
-//                        tvTokens.append(rule.toString() + "\n");
-//                    }
-
-//                } catch (AnalyzerException e) {
-//                    tvTokens.setText(e.getMessage());
-//                    tvTokens.setTextColor(Color.RED);
-//                    haveError = true;
-//
-//                } catch (IllegalArgumentException i) {
-//                    tvTokens.setText(i.getMessage());
-//                    tvTokens.setTextColor(Color.YELLOW);
-//                    haveError = true;
-//                } catch (RuntimeException r) {
-//                    tvTokens.setText(r.getMessage());
-//                    tvTokens.setTextColor(Color.WHITE);
-//                    haveError = true;
-//                }
             }
         });
 
