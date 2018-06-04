@@ -9,8 +9,8 @@ import java.util.regex.Pattern;
 
 
 import ir.mrbug.darkcompiler.exceptions.AnalyzerException;
-import ir.mrbug.darkcompiler.token.Token;
-import ir.mrbug.darkcompiler.token.TokenType;
+import ir.mrbug.darkcompiler.ttoken.Token;
+import ir.mrbug.darkcompiler.ttoken.TokenType;
 
 public class Lexer {
 

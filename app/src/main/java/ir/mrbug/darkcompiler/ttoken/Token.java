@@ -1,4 +1,4 @@
-package ir.mrbug.darkcompiler.token;
+package ir.mrbug.darkcompiler.ttoken;
 
 /**
  * The {@code Token} class represents token (lexeme). A token is a string of

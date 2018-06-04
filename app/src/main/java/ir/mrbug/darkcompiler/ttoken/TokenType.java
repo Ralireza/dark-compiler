@@ -1,4 +1,4 @@
-package ir.mrbug.darkcompiler.token;
+package ir.mrbug.darkcompiler.ttoken;
 
 /**
  * The {@code TokeType} enumeration represents types of tokens in subset of Java

@@ -14,6 +14,10 @@ import android.view.animation.AccelerateDecelerateInterpolator;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import ir.mrbug.darkcompiler.exceptions.AnalyzerException;
+import ir.mrbug.darkcompiler.lexer.*;
+import ir.mrbug.darkcompiler.ttoken.*;
+
 import com.daimajia.androidanimations.library.Techniques;
 import com.daimajia.androidanimations.library.YoYo;
 
@@ -28,6 +32,8 @@ public class MainActivity extends AppCompatActivity {
     private View btnParse;
     private TextView tvTokens;
     private TextView tvSrc;
+    private Lexer lexer;
+    private boolean haveError = false;
 
     @Override
     protected void attachBaseContext(Context newBase) {
@@ -52,12 +58,51 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 tvTokens.setTextColor(getColor(R.color.green));
+                lexer = new Lexer();
                 YoYo.with(Techniques.Flash)
                         .duration(400)
                         .playOn(source);
                 YoYo.with(Techniques.Pulse)
                         .duration(300)
                         .playOn(btnTokenize);
+
+
+                try {
+                    tvTokens.setText("");
+
+                    lexer.tokenize(source.getText().toString());
+//                    parser = Parser.getObj();
+//                    parser.parse(Gramer.laws
+//                            , lexer.getFilteredTokens());
+
+                    if (haveError) {
+                        tvTokens.setText("");
+                    }
+                    for (Token token :
+                            lexer.getFilteredTokens()) {
+                        tvTokens.append("\"" + token.getTokenType() + "\"     :     \"" + token.getTokenString() + "\"   \n");
+                        tvTokens.setTextColor(getResources().getColor(R.color.green));
+
+                    }
+
+//                    for (Rule rule : parser.getSequenceOfAppliedRules()) {
+//                        tvTokens.append(rule.toString() + "\n");
+//                    }
+
+                } catch (AnalyzerException e) {
+                    tvTokens.setText(e.getMessage());
+                    tvTokens.setTextColor(Color.RED);
+                    haveError = true;
+
+                } catch (IllegalArgumentException i) {
+                    tvTokens.setText(i.getMessage());
+                    tvTokens.setTextColor(Color.YELLOW);
+                    haveError = true;
+                } catch (RuntimeException r) {
+                    tvTokens.setText(r.getMessage());
+                    tvTokens.setTextColor(Color.WHITE);
+                    haveError = true;
+                }
             }
         });
 
